@@ -1,8 +1,8 @@
-class AddTypCompanies < ActiveRecord::Migration
-  def up
-    #Typ_companies
-    TypCompany.create(name: "Consumer")
-    TypCompany.create(name: "Deliverer")
-    TypCompany.create(name: "Supplier")
+class CreateTypCompanies < ActiveRecord::Migration
+  def change
+    create_table :typ_companies do |t|
+      t.string :name, null: false
+      t.timestamps
+    end
   end
 end

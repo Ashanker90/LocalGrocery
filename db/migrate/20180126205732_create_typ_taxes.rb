@@ -1,9 +1,8 @@
-class AddTypTaxes < ActiveRecord::Migration
-  def up
-    #Typ_taxes
-    TypTax.create(id: 1, name: "GST")
-    TypTax.create(id: 2, name: "PST")
-    TypTax.create(id: 3, name: "HST")
-    TypTax.create(id: 4, name: "QST")
+class CreateTypTaxes < ActiveRecord::Migration
+  def change
+    create_table :typ_taxes do |t|
+      t.string :name, null: false
+      t.timestamps
+    end
   end
 end
