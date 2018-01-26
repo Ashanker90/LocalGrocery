@@ -4,5 +4,5 @@ class OrgCompany < ActiveRecord::Base
 	has_many :org_products
 
 	belongs_to :typ_company, foreign_key: "typ_company_id"
-
+	
 end
